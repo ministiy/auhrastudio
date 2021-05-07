@@ -3,21 +3,22 @@ import { Link, withRouter } from "react-router-dom";
 
 function Navigation(props) {
   return (
-    <div className="navigation">
-      <nav class="navbar navbar-expand navbar-dark bg-dark">
-        <div class="container">
-          <Link class="navbar-brand" to="/">
-            Auhra Studio
-          </Link>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <Link class="navbar-brand" to="/">
+          Auhra Studio
+        </Link>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-          <div>
+        <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav ml-auto">
               <li
                 class={`nav-item  ${
                   props.location.pathname === "/" ? "active" : ""
                 }`}
               >
-                <Link class="nav-link" to="/">
+                <Link class="nav-link" data-toggle="collapse" data-target="#navbarToggler" to="/">
                   Home
                   <span class="sr-only">(current)</span>
                 </Link>
@@ -27,7 +28,7 @@ function Navigation(props) {
                   props.location.pathname === "/about" ? "active" : ""
                 }`}
               >
-                <Link class="nav-link" to="/about">
+                <Link class="nav-link" data-toggle="collapse" data-target="#navbarToggler" to="/about">
                   About
                 </Link>
               </li>
@@ -36,7 +37,7 @@ function Navigation(props) {
                   props.location.pathname === "/contact" ? "active" : ""
                 }`}
               >
-                <Link class="nav-link" to="/contact">
+                <Link class="nav-link" data-toggle="collapse" data-target="#navbarToggler" to="/contact">
                   Contact
                 </Link>
               </li>
@@ -45,15 +46,13 @@ function Navigation(props) {
                   props.location.pathname === "/portfolio" ? "active" : ""
                 }`}
               >
-                <Link class="nav-link" to="/portfolio">
+                <Link class="nav-link" data-toggle="collapse" data-target="#navbarToggler" to="/portfolio">
                   Portfolio
                 </Link>
               </li>
             </ul>
-          </div>
         </div>
       </nav>
-    </div>
   );
 }
 
