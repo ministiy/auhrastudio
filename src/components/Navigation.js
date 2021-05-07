@@ -46,7 +46,7 @@ function Navigation(props) {
                 }`}
               >
                 <Link class="nav-link" to="/portfolio">
-                  Portfolio
+                  Portfolioss
                 </Link>
               </li>
             </ul>
