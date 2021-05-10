@@ -1,0 +1,19 @@
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+  background: transparent;
+}
+
+.navbar-nav {
+    float:none;
+    margin:0 auto;
+    text-align: center;
+    background: transparent;
+}
+.navbar-inner {
+    background:transparent;
+}

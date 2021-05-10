@@ -1,18 +1,16 @@
 import React from "react";
 import { Link, withRouter } from "react-router-dom";
+import './Navigation.css';
 
 function Navigation(props) {
-  return (
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <Link class="navbar-brand" to="/">
-          Auhra Studio
-        </Link>
+  return ( 
+      <nav class="navbar navbar-expand-lg navbar-light">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarToggler">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav mr-auto">
               <li
                 class={`nav-item  ${
                   props.location.pathname === "/" ? "active" : ""
@@ -23,6 +21,7 @@ function Navigation(props) {
                   <span class="sr-only">(current)</span>
                 </Link>
               </li>
+
               <li
                 class={`nav-item  ${
                   props.location.pathname === "/about" ? "active" : ""
@@ -50,6 +49,7 @@ function Navigation(props) {
                   Portfolio
                 </Link>
               </li>
+
             </ul>
         </div>
       </nav>

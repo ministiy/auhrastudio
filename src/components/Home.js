@@ -1,6 +1,7 @@
 import React from "react";
 import './Home.css';
-import logo from '../1.jpg';
+import logo from '../kain.jpeg';
+import { Link, withRouter } from "react-router-dom";
 
 function Home() {
   return (
@@ -9,7 +10,12 @@ function Home() {
       backgroundSize: "cover",
       height: "100vh",
     }}>
-    <h1 className="Centered"> This is home page </h1>
+      <div class='container'>
+        <h1 className='Centered'>
+          <p class='text-white'> Website in progress. </p> 
+          <p class='text-white'> Please visit my <a class='text-white' href="https://www.instagram.com/auhra"><u>Instagram</u></a> in the meantime </p>
+        </h1>
+      </div>
     </div>
   );
 }
